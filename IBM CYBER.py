@@ -1,14 +1,5 @@
 from tkinter import *
-from PIL import Image, ImageTk
-from tkinter import filedialog
-from stegano import lsb
 
-filename = None
-
-def showimage():
-    global filename
-    filename = filedialog.askopenfilename(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg")])
-    try:
         img = Image.open(filename)
         img = img.resize((300, 300), Image.LANCZOS)
         photo = ImageTk.PhotoImage(img)
@@ -50,19 +41,7 @@ def save():
             print("Image saved successfully.")
         else:
             print("Save canceled.")
-    else:
-        print("Please select an image first.")
-
-root = Tk()
-
-
-root.title("Steganography - Hiding a Secret Text Message in an Image")
-root.geometry("700x500+150+180")
-root.resizable(False, False)
-root.configure(bg="#2f4155")
-
-
-Label(root, text="CYBER SECURITY", bg="#2f4155", fg="white", font="arial 25 bold").place(x=100, y=20)
+  
 
 try:
     app_icon_img = Image.open(r'C:\Users\Adithi\OneDrive\Desktop\IBM CYBER\kitty.jpg')
@@ -108,11 +87,4 @@ Button(frame3, text="Save Image", width=10, height=2, font="arial 14 bold", comm
 Label(frame3, text="Picture, Image, Photo File", bg="#2f4155", fg="yellow").place(x=20, y=5)
 
 # Fourth frame
-frame4 = Frame(root, bd=3, bg="#2f4155", width=330, height=100, relief=GROOVE)
-frame4.place(x=360, y=370)
-
-Button(frame4, text="Hide Data", width=10, height=2, font="arial 14 bold", command=Hide).place(x=20, y=30)
-Button(frame4, text="Show Data", width=10, height=2, font="arial 14 bold", command=Show).place(x=180, y=30)
-Label(frame4, text="Picture, Image, Photo File", bg="#2f4155", fg="yellow").place(x=20, y=5)
-
-root.mainloop()
+frame4 = Frame(root, bd=3, bg="#2f4155", 
