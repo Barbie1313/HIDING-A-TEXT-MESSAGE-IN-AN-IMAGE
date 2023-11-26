@@ -62,7 +62,7 @@ root.resizable(False, False)
 root.configure(bg="#2f4155")
 
 
-Label(root, text="CYBER SCIENCE", bg="#2f4155", fg="white", font="arial 25 bold").place(x=100, y=20)
+Label(root, text="CYBER SECURITY", bg="#2f4155", fg="white", font="arial 25 bold").place(x=100, y=20)
 
 try:
     app_icon_img = Image.open(r'C:\Users\Adithi\OneDrive\Desktop\IBM CYBER\kitty.jpg')
